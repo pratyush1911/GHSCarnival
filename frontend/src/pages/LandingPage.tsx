@@ -54,7 +54,7 @@ const LandingPage: React.FC = () => {
           {/* LOGO */}
           <div className="flex justify-center">
             <img
-              src="/ghs-carnival-logo.png"
+              src="/ghs_carnival_logo.png"
               alt="GHS Carnival Logo"
               className="h-[100px] object-contain mt-[30vh]"
             />
