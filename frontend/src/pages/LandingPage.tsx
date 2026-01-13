@@ -8,14 +8,15 @@ import {
   FaUsers,
   FaChartBar,
   FaFileAlt,
+  FaCrown,
 } from "react-icons/fa";
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen flex justify-center bg-[#F3F3F3]">
       {/* MOBILE FRAME */}
       <div
-        className="relative w-[390px] min-h-screen overflow-y-auto pb-[110px]"
+        className="relative w-[390px] min-h-screen overflow-y-auto pb-[120px]"
         style={{
           backgroundImage: "url(/Background.png)",
           backgroundSize: "440px 956px",
@@ -23,35 +24,34 @@ const LandingPage = () => {
           backgroundPosition: "top center",
         }}
       >
-        {/* SOFT COLOR-CORRECTION OVERLAY (FIXES BRIGHTNESS) */}
+        {/* SOFT OVERLAY TO REDUCE BRIGHTNESS */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/30 to-white/40 pointer-events-none" />
 
         {/* CONTENT */}
         <div className="relative px-[20px] pt-[24px]">
-          {/* TOP LOGO */}
+          {/* LOGO */}
           <div className="flex justify-center">
             <img
               src="/ghs-carnival-logo.png"
-              alt="GHS Carnival"
-              className="h-[100px] object-contain"
-              style={{ marginTop: "30vh" }}
+              alt="GHS Carnival Logo"
+              className="h-[100px] object-contain mt-[30vh]"
             />
           </div>
 
-
-          <div 
-          style={{
-            display : "flex",
-            justifyContent: "center"
-          }}>
-          <h1
-            className="text-[#232165]"
-            style={{ fontFamily: "'Kdam thmor pro', sans-serif", fontSize: "20px", paddingBottom: "50vh", display : "flex" , textAlign:"center", fontWeight: 500 }}
-
+          {/* TAGLINE */}
+          <div className="flex justify-center">
+            <h1
+              className="text-[#232165] text-center font-medium"
+              style={{
+                fontFamily: "'Kdam Thmor Pro', sans-serif",
+                fontSize: "20px",
+                paddingBottom: "50vh",
+              }}
             >
               Games, Glory & Hostel Stories
             </h1>
           </div>
+
           {/* HERO IMAGE */}
           <div className="mt-[20px] flex justify-center">
             <img
@@ -82,8 +82,8 @@ const LandingPage = () => {
             style={{ fontFamily: "'Kdam Thmor Pro', sans-serif" }}
           >
             Returning back in 2026, the annual GHS Carnival is better than ever,
-            with upcoming jaw-dropping cultural performances, to be presented by
-            our very own students and thrilling sporting events.
+            with upcoming jaw-dropping cultural performances and thrilling
+            sporting events presented by our very own students.
           </p>
 
           {/* EVENT GALLERY */}
@@ -99,12 +99,9 @@ const LandingPage = () => {
 
           {/* QUICK LINKS */}
           <div className="mt-[28px] bg-white rounded-[20px] shadow-lg px-[18px] py-[18px]">
-            <h4 className="text-[18px] font-bold mb-[14px]">
-              Quick Links
-            </h4>
+            <h4 className="text-[18px] font-bold mb-[14px]">Quick Links</h4>
 
-           <div className="space-y-[14px] text-[14px] font-semibold">
-              {/* ✅ INSTAGRAM LINK */}
+            <div className="space-y-[14px] text-[14px] font-semibold">
               <a
                 href="https://www.instagram.com/ghs.carnival_muj/"
                 target="_blank"
@@ -112,7 +109,7 @@ const LandingPage = () => {
                 className="flex items-center gap-[12px] hover:text-[#FF8736]"
               >
                 <FaInstagram className="text-[20px] text-pink-500" />
-                <span>GHS CARNIVAL’s Official Page</span>
+                <span>GHS Carnival’s Official Page</span>
               </a>
 
               <div className="flex items-center gap-[12px]">
@@ -145,19 +142,20 @@ const LandingPage = () => {
               <FaUsers className="text-[18px]" />
               Dev Team
             </div>
-</div>
-<div className="flex flex-col items-center">
+
+            <div className="flex flex-col items-center">
               <FaCrown className="text-[18px]" />
-              Block Captains
-            </div> 
+             Block Captains
+            </div>
+
             <div className="flex flex-col items-center">
               <FaChartBar className="text-[18px]" />
-              Live Score
+              Live
             </div>
 
             <div className="flex flex-col items-center">
               <FaFileAlt className="text-[18px]" />
-              Guidelines
+              Rules
             </div>
           </div>
         </div>
