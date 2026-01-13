@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NavBar from "../components/NavBar";
 
 const blocks = [
   "B1",
@@ -109,6 +110,7 @@ export default function HostelBlocksPage(): JSX.Element {
           })}
         </div>
       </div>
+      <NavBar />
     </div>
   );
 }

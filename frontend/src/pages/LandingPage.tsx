@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../components/NavBar";
 import {
   FaInstagram,
   FaGlobe,
@@ -153,17 +154,7 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
 
-        {/* FIXED BOTTOM NAV */}
-        <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-[390px] bg-white border-t py-[10px] z-50">
-          <div className="flex justify-around text-[11px] text-gray-500">
-            <NavItem icon={<FaHome />} label="Home" active onClick={() => navigate("/")} />
-            <NavItem icon={<FaInfoCircle />} label="About" onClick={() => navigate("/about")} />
-            <NavItem icon={<FaCrown />} label="Block Captains" onClick={() => navigate("/hostel-blocks")} />
-            <NavItem icon={<FaChartBar />} label="Live Scores" onClick={() => navigate("/live-scores")} />
-            <NavItem icon={<FaFileAlt />} label="Guidelines" onClick={() => navigate("/guidelines")} />
-          <NavItem icon={<FaUsers />} label="Dev Team" onClick={() => navigate("/teams")} />
-          </div>
-        </div>
+        <NavBar />
       </div>
     </div>
   );
@@ -191,29 +182,6 @@ const SportTile = ({
   >
     <div className="text-[26px]">{icon}</div>
     <span className="mt-[6px] text-[11px] font-semibold">{label}</span>
-  </div>
-);
-
-/* 🔹 BOTTOM NAV ITEM */
-const NavItem = ({
-  icon,
-  label,
-  active = false,
-  onClick,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  active?: boolean;
-  onClick?: () => void;
-}) => (
-  <div
-    onClick={onClick}
-    className={`flex flex-col items-center cursor-pointer transition-colors duration-200 ${
-      active ? "text-[#FF8736]" : "text-gray-500 hover:text-[#FF8736]"
-    }`}
-  >
-    <div className="text-[18px]">{icon}</div>
-    {label}
   </div>
 );
 

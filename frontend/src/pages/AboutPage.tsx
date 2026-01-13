@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Trophy, Users, Star, ChevronDown } from 'lucide-react';
+import NavBar from '../components/NavBar';
 
 const AboutPage: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -149,6 +150,7 @@ const AboutPage: React.FC = () => {
           ))}
         </div>
       </section>
+      <NavBar />
     </div>
   );
 };
