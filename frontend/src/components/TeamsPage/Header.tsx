@@ -14,7 +14,7 @@ function Header() {
           className="h-[46px] w-[130px]"
         />
 
-        <h1 className="text-[44px] text-[#302054] font-italian tracking-wide pt-2">
+        <h1 className="text-[44px] text-[#302054] font-italian tracking-wide pt-1">
           CARNIVAL
         </h1>
       </a>

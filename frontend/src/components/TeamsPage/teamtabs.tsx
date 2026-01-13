@@ -24,14 +24,15 @@ export default function TeamTabs({ onTabChange }: TeamTabsProps) {
   };
 
   return (
-    <div className="w-full mb-5">
-      <div className="flex flex-nowrap overflow-x-auto gap-4 px-0 py-1 mb-10">
+    <div className="w-full mb-5 ">
+      <div className="flex flex-nowrap overflow-x-auto [&::-webkit-scrollbar]:hidden gap-4 md:gap-20 px-0 py-1 mb-10 md:mb-24 md:justify-center
+    md:overflow-visible">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => handleClick(tab.id)}
             className={`
-              px-4 py-2 rounded-full whitespace-nowrap transition-colors
+              px-4 py-2 rounded-full whitespace-nowrap transition-colors text-sm md:text-base
         ${activeTab===tab.id ? tab.activeColor : "bg-[#C0C0C0] text-gray-800"}
             `}
           >

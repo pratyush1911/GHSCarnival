@@ -40,8 +40,10 @@ function MemberCard({ member, activeTab }:MemberCardProps) {
     
   <>
     <div className="h-[420px]
+    
       relative
       w-[250px]
+      md:w-[270px]
       mx-auto
       rounded-2xl
       bg-white
